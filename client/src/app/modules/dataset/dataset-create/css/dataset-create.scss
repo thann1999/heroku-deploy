@@ -1,0 +1,33 @@
+.t-dataset-create {
+  padding: 0px 200px 0px 200px;
+
+  .tox-tinymce {
+    border-radius: 5px;
+  }
+
+  .b-header {
+    .p-text-area {
+      width: 75%;
+      background-color: #fafbfc;
+      border-radius: 5px;
+    }
+
+    .p-text-area:focus {
+      outline: none;
+      box-shadow: 0 0 0 1.5pt #3f51b5;
+    }
+
+    .b-dataset-url {
+      width: 100%;
+      display: inline-flex;
+
+      .MuiOutlinedInput-input {
+        padding-left: 4px;
+      }
+
+      .MuiIconButton-root {
+        padding: 0px;
+      }
+    }
+  }
+}
