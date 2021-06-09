@@ -42,9 +42,10 @@ app.use(function (req, res, next) {
 });
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
+  console.log('production');
+  app.use(express.static(path.join(__dirname, 'build')));
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
 }
 // error handler
@@ -57,7 +58,7 @@ app.use(function (err, req, res, next) {
   res.send(res.locals.message);
 });
 
-var port = process.env.PORT || '3000';
+var port = 3000;
 app.listen(port, () => {
   console.log(`Server running at ${port}`);
 });
