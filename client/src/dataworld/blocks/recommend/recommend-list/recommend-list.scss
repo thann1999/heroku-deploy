@@ -1,0 +1,30 @@
+.b-recommend-list {
+  width: 100%;
+
+  .MuiAccordionSummary-content.Mui-expanded {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .b-details {
+    display: block;
+    padding: 0px;
+
+    .b-list {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+
+      .b-item {
+        padding: 8px 10px;
+        border-bottom: 1px solid #dedfe0;
+
+        &:hover {
+          background-color: #f3f3f3;
+        }
+      }
+    }
+  }
+}
