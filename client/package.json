@@ -48,11 +48,12 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "start": "set PORT=5500 && react-scripts start",
-    "build": "set PORT=5500 && react-scripts build",
-    "test": "set PORT=5500 && react-scripts test",
-    "eject": "set PORT=5500 && react-scripts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:3000",
   "eslintConfig": {
     "extends": [
       "react-app",
