@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
+    "install-client": "cd client && npm install && npm i --save-dev @types/react-router-dom",
     "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node index.js",
     "client": "cd client && npm start"
