@@ -43,10 +43,10 @@ app.use(function (req, res, next) {
 
 if (process.env.NODE_ENV === 'production') {
   // Step 1:
-  app.use(express.static(path.resolve(__dirname, './client/build')));
+  app.use(express.static(path.resolve(__dirname, './build')));
   // Step 2:
   app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, './client/build/index.html'));
+    res.sendFile(path.join(__dirname, '.build/index.html'));
   });
 }
 // error handler
