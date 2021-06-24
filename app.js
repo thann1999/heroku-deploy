@@ -36,6 +36,9 @@ app.use('/api/file', fileRouter);
 app.use('/api/comment', commentRouter);
 app.use('/api/common', commonRouter);
 
+app.get('*', function (request, response) {
+  response.sendFile(path.join(__dirname, 'client/build/index.html'));
+});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -52,12 +55,4 @@ app.use(function (err, req, res, next) {
   res.send(res.locals.message);
 });
 
-app.use(express.static(path.resolve(__dirname, "client/build")));
-app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "client/build", "index.html"));
-});
-
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-    console.log(`Server started on port ${port}`);
-});
+module.exports = app;
